@@ -5,7 +5,7 @@ let json2csv = require('json2csv');
 
 const inputFile = 'paper.dash.org.txt';
 const BcAPIToken = process.env.BC_API_TOKEN;
-const BcAPI = `https://api.blockcypher.com/v1/dash/main/addrs?token=${BcAPIToken}`;
+const BcAPI = `https://api.blockcypher.com/v1/dash/main/addrs`;
 const outputFile = 'wallet_balances.csv';
 
 function readFile(inputFile) {
@@ -29,7 +29,7 @@ const fileObj = contents
 const addresses = fileObj.map(e => e['pub']);
 
 const getBalance = (addr) => {
-    return axios.get(`${BcAPI}/${addr}/${BcAPIToken}`)
+    return axios.get(`${BcAPI}/${addr}/?token=${BcAPIToken}`)
 };
 
 const getBalances = () => {
