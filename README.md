@@ -2,7 +2,7 @@
 This tool takes the output of paper wallets generated from paper.dash.org and generates a csv file showing the balances of all dash addresses.
 
 ### Pre-requisites
-* *Node version 8.x* (install from the [Node.js website][https://nodejs.org/en/])
+* *Node version 8.x* (install from the [Node.js website](https://nodejs.org/en/))
 * *git* (install after installing node using `npm install git`)
 
 ### 1. Obtain Dash Paper Wallets
