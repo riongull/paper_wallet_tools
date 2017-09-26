@@ -1,11 +1,11 @@
 const fs = require('fs');
-require('dotenv').config()
 const axios = require('axios');
-let json2csv = require('json2csv');
+const json2csv = require('json2csv');
+require('dotenv').config();
 
 const inputFile = 'paper.dash.org.txt';
 const BcAPIToken = process.env.BC_API_TOKEN;
-const BcAPI = `https://api.blockcypher.com/v1/dash/main/addrs`;
+const BcAPI = 'https://api.blockcypher.com/v1/dash/main/addrs';
 const outputFile = 'wallet_balances.csv';
 
 function readFile(inputFile) {
